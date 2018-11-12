@@ -1,8 +1,7 @@
 import random
 validList = ["1","2","3"]
+print(len(validList))
 divby18List = []
-for j in range(0,8):
-    print(j)
 correctNumbers = []
 for i in range(10000000, 99999999):
     valid = True
@@ -11,13 +10,13 @@ for i in range(10000000, 99999999):
     if valid:
         print("Divisible by 18!")
         divby18List.append(i)
-        for counter in range (0,7):
+        for counter in range (0,8):
             if str(i)[counter] not in validList:
                 valid = False
-    print(i, valid, len(validList))
+    print(i, valid, len(correctNumbers))
     if valid:
         print("Valid number found!")
-        validList.append(i)
-print(len(validList))
-print(validList)
+        correctNumbers.append(i)
 print(divby18List)
+print(len(correctNumbers))
+print(correctNumbers)
